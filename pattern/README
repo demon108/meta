@@ -1,0 +1,157 @@
+
+选择器方式：xpath/find
+	Url_Selector
+	Title_Selector
+	Date_Selector
+	Author_Selector
+	Abstract_Selector
+	Copy_Selector
+	Click_Selector
+	Reply_Selector
+	Source_Selector
+	Id_Selector
+	
+#xpath:xpath选择器
+	Url_XPath
+	Title_Xpath
+	Date_Xpath
+	Author_Xpath
+	Abstract_Xpath
+	Copy_Url_Xpath
+	Click_Xpath
+	Reply_Xpath
+	Source_Xpath
+	Id_Xpath
+	
+#xpath_num：取xpath选择器的第几个值，默认取0
+	Url_XPath_Num
+	Title_Xpath_Num
+	Date_Xpath_Num
+	Author_Xpath_Num
+	Abstract_Xpath_Num
+	Copy_Url_Xpath_Num
+	Click_Xpath_Num
+	Reply_Xpath_Num
+	Source_Xpath_Num
+	Id_Xpath_Num
+	
+#xpath_split：是否需要对xpath选择器选择出来的值进行split，默认不需要
+	Url_XPath_Split
+	Title_Xpath_Split
+	Date_Xpath_Split
+	Author_Xpath_Split
+	Abstract_Xpath_Split
+	Copy_Url_Xpath_Split
+	Click_Xpath_Split
+	Reply_Xpath_Split
+	Source_Xpath_Split
+	Id_Xpath_Split
+
+#xpath_split_num：取经过split之后的第几个值，默认为0
+	Url_XPath_Split_Num
+	Title_Xpath_Split_Num
+	Date_Xpath_Split_Num
+	Author_Xpath_Split_Num
+	Abstract_Xpath_Split_Num
+	Copy_Url_Xpath_Split_Num
+	Click_Xpath_Split_Num
+	Reply_Xpath_Split_Num
+	Source_Xpath_Split_Num
+	Id_Xpath_Split_Num
+	
+#find选择器开始标志
+	Url_Start
+	Title_Start
+	Date_Start
+	Author_Start
+	Abstract_Start
+	Copy_Start
+	Click_Start
+	Reply_Start
+	Source_Start
+	Id_Start
+
+#find选择器结束标志
+	Url_End
+	Title_End
+	Date_End
+	Author_End
+	Abstract_End
+	Copy_End
+	Click_End
+	Reply_End
+	Source_End
+	Id_End
+
+Abstarct_Selector:find/xpath  表示获取Abstarct所选用的选择器,默认选择器为xpath  
+    xpath：xpath选择器
+            该方法需要的参数：
+		Date_Xpath://p[@class="c-author"]/text()    选择器
+		Date_Xpath_Num:0							选取选择器的第几个值
+		Date_Xpath_Split:\xa0\xa0					是否需要对Date_Xpath选择的结果进行分割，默认为空不分割
+		Date_Xpath_Split_Num:1    					取分割后的第几个字段
+    find：python的string的find方法选择器
+		Abstarct_Start:
+		Abstarct_End:
+
+		
+Item_Xpath:表示所取的结构都在一个item中，然后再在该item中通过其它*_Xpath获取结果
+
+Url_Check_Tag:默认为空，若有则截取掉字符后的部分
+	 eg: Url_Check_Tag:#  则截取掉url # 后的内容
+
+Query_Encoding:拼接url时，关键词的编码，默认为utf-8
+
+
+对选择器选择出来的结果进行处理：
+    1、
+		Abstarct_Xpath:p/text()
+		*_Xpath:表示获取该值的xpath表达式
+	
+		Abstarct_Xpath_Num:all
+		*_Xpath_Num：表示获取通过*_Xpath获取的列表的那个值，
+					若不填写： 则默认为0，
+					all：表示所有值都获取，并且讲结果合并 ''.join(list)
+					1,2,3：表示需取特定字段，并且以,隔开
+	2、
+		Title_Xpath_Bs4:是否需要使用BeautifulSoup取出所选择出结果的全部正文
+			true:生效
+			false：不生效
+			默认不生效
+			from bs4 import BeautifulSoup
+		    ''.join(BeautifulSoup(res).findAll(text=True))
+	3、
+		Date_Xpath_Split:对结果进行分割
+		  eg：&nbsp; 
+	    Date_Xpath_Split_Num:取分割后的第几个值
+    4、
+		Date_Xpath_RE:
+		           通过正则表达式从xpath选择的结果中选取出需要的数据
+
+抓取的翻页控制：
+    1、
+		Check_Article_Time:判断是否翻页时，是否需要考虑当前页面最后一篇文章的发布时间
+		true：需要考虑
+		false：不需要考虑
+		默认为true
+		注意：该参数必须和Next_Page_Xpath同时使用，否则会无限构造下一页url，不会停止
+	
+		Next_Page_Xpath:抓取下一页的pattern
+		           若通过该pattern获取不到下一页地址，则不再翻页
+		 
+	2、
+		Crawle_Total_Pages:总共抓取多少页
+		            默认为空，不生效
+		    eg:Crawle_Total_Pages:10
+	3、
+		默认的情况是根据当前页最后一篇文章的发布时间来判断是否翻页
+	
+抓取cluster_url:
+           抓取cluster_url只根据Next_Page_Xpath翻页，
+           若能根据Next_Page_Xpath得到下一页链接，则翻页，
+           若得不到下一页链接，则该cluster_url抓取完毕
+    
+    
+配置文件中的特殊符号表示：
+    @@SPACE:代表空格
+ 

@@ -1,0 +1,12 @@
+配置文件：
+放置于pattern中
+eg：sogou_weixin_day.conf
+          会识别pattern文件中的每个*.conf文件，每个*.conf都会启动一个crawler
+
+
+cookie：
+放置于cookie中
+eg： sougou_weixin_day.cookie
+cookie的识别是根据cookie文件名：
+          如sogou_weixin_day.conf的cookie文件需配置为sogou_weixin_day.cookie
+          若找到conf文件对应的cookie文件，则加载该cookie，若没有该cookie文件，则不加载cookie

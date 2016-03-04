@@ -1,0 +1,66 @@
+2015-12-02 21:20:12+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: meta)
+2015-12-02 21:20:12+0800 [scrapy] INFO: Optional features available: ssl, http11, django
+2015-12-02 21:20:12+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'meta.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['meta.spiders'], 'RETRY_HTTP_CODES': [400, 408, 502, 504], 'BOT_NAME': 'meta', 'DOWNLOAD_TIMEOUT': 60, 'CONCURRENT_ITEMS': 300, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', 'DEPTH_PRIORITY': 1, 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeue.FifoMemoryQueue', 'LOG_FILE': 'sogou_news_copy.log', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeue.PickleFifoDiskQueue', 'DOWNLOAD_DELAY': 30.0}
+2015-12-02 21:20:12+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-12-02 21:20:12+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-12-02 21:20:12+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-12-02 21:20:12+0800 [scrapy] INFO: Enabled item pipelines: MetaPipeline
+2015-12-02 21:20:12+0800 [cluster_meta] INFO: Spider opened
+2015-12-02 21:20:12+0800 [cluster_meta] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2015-12-02 21:20:12+0800 [scrapy] INFO: response url: http://news.sogou.com/news?query=12576&clusterId=http%3A%2F%2Fwww.cuncunle.com%2Fvillage-104-103522-article-9301449044871249-1.html&ct=1&sort=1&mode=1&w=1449062160690&dr=1&dp=1&p=sogou__free
+2015-12-02 21:20:52+0800 [scrapy] INFO: response url: http://news.sogou.com/news?query=12577&clusterId=http%3A%2F%2Fwww.juwai.com%2FUSproperty%2Fr-147_c-12577_odmin-2000_odmax-2500_pmin-5000000_pmax-7000000&ct=1&sort=1&mode=1&w=1449062192702&dr=1&dp=1&p=sogou__free
+2015-12-02 21:21:12+0800 [cluster_meta] INFO: Crawled 2 pages (at 2 pages/min), scraped 2 items (at 2 items/min)
+2015-12-02 21:21:31+0800 [scrapy] INFO: response url: http://news.sogou.com/news?query=12580&clusterId=http%3A%2F%2F365jia.cn%2Fnews%2F2015-12-02%2F509754D946BEA7DC.html&ct=1&sort=1&mode=1&w=1449062258034&dr=1&dp=1&p=sogou__free
+2015-12-02 21:22:09+0800 [scrapy] INFO: response url: http://news.sogou.com/news?query=12580&clusterId=http%3A%2F%2Fwww.cuncunle.com%2Fvillage-104-103522-article-9301449044871249-1.html&ct=1&sort=1&mode=1&w=1449062258034&dr=1&dp=1&p=sogou__free
+2015-12-02 21:22:12+0800 [cluster_meta] INFO: Crawled 4 pages (at 2 pages/min), scraped 6 items (at 4 items/min)
+2015-12-02 21:22:54+0800 [scrapy] INFO: response url: http://news.sogou.com/news?query=12580&clusterId=http%3A%2F%2Fwww.juwai.com%2FUSproperty%2Fr-135_c-12580_idmin-200_idmax-300&ct=1&sort=1&mode=1&w=1449062258034&dr=1&dp=1&p=sogou__free
+2015-12-02 21:23:12+0800 [cluster_meta] INFO: Crawled 5 pages (at 1 pages/min), scraped 6 items (at 0 items/min)
+2015-12-02 21:23:34+0800 [scrapy] INFO: response url: http://news.sogou.com/news?query=12580&clusterId=http%3A%2F%2Fzfrx.jschina.com.cn%2Fsystem%2F2015%2F12%2F01%2F027191183.shtml&ct=1&sort=1&mode=1&w=1449062258034&dr=1&dp=1&p=sogou__free
+2015-12-02 21:23:34+0800 [scrapy] INFO: catch idle signal...
+2015-12-02 21:23:39+0800 [cluster_meta] INFO: Closing spider (finished)
+2015-12-02 21:23:39+0800 [cluster_meta] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 2728,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 6,
+	 'downloader/response_bytes': 66216,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 6,
+	 'dupefilter/filtered': 12,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2015, 12, 2, 13, 23, 39, 246938),
+	 'item_scraped_count': 9,
+	 'log_count/INFO': 17,
+	 'request_depth_max': 1,
+	 'response_received_count': 6,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2015, 12, 2, 13, 20, 12, 691027)}
+2015-12-02 21:23:39+0800 [cluster_meta] INFO: Spider closed (finished)
+2015-12-02 21:30:12+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: meta)
+2015-12-02 21:30:12+0800 [scrapy] INFO: Optional features available: ssl, http11, django
+2015-12-02 21:30:12+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'meta.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['meta.spiders'], 'RETRY_HTTP_CODES': [400, 408, 502, 504], 'BOT_NAME': 'meta', 'DOWNLOAD_TIMEOUT': 60, 'CONCURRENT_ITEMS': 300, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', 'DEPTH_PRIORITY': 1, 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeue.FifoMemoryQueue', 'LOG_FILE': 'sogou_news_copy.log', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeue.PickleFifoDiskQueue', 'DOWNLOAD_DELAY': 30.0}
+2015-12-02 21:30:12+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-12-02 21:30:12+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-12-02 21:30:12+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-12-02 21:30:12+0800 [scrapy] INFO: Enabled item pipelines: MetaPipeline
+2015-12-12 14:30:13+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: meta)
+2015-12-12 14:30:13+0800 [scrapy] INFO: Optional features available: ssl, http11, django
+2015-12-12 14:30:13+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'meta.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['meta.spiders'], 'RETRY_HTTP_CODES': [400, 408, 502, 504], 'BOT_NAME': 'meta', 'DOWNLOAD_TIMEOUT': 60, 'CONCURRENT_ITEMS': 300, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', 'DEPTH_PRIORITY': 1, 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeue.FifoMemoryQueue', 'LOG_FILE': 'sogou_news_copy.log', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeue.PickleFifoDiskQueue', 'DOWNLOAD_DELAY': 30.0}
+2015-12-12 14:30:13+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-12-12 14:30:13+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-12-12 14:30:13+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-12-12 14:40:12+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: meta)
+2015-12-12 14:40:12+0800 [scrapy] INFO: Optional features available: ssl, http11, django
+2015-12-12 14:40:12+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'meta.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['meta.spiders'], 'RETRY_HTTP_CODES': [400, 408, 502, 504], 'BOT_NAME': 'meta', 'DOWNLOAD_TIMEOUT': 60, 'CONCURRENT_ITEMS': 300, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', 'DEPTH_PRIORITY': 1, 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeue.FifoMemoryQueue', 'LOG_FILE': 'sogou_news_copy.log', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeue.PickleFifoDiskQueue', 'DOWNLOAD_DELAY': 30.0}
+2015-12-12 14:40:12+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-12-12 14:40:12+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-12-12 14:40:12+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-12-12 14:50:12+0800 [scrapy] INFO: Scrapy 0.24.4 started (bot: meta)
+2015-12-12 14:50:12+0800 [scrapy] INFO: Optional features available: ssl, http11, django
+2015-12-12 14:50:12+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'meta.spiders', 'LOG_LEVEL': 'INFO', 'CONCURRENT_REQUESTS': 100, 'SPIDER_MODULES': ['meta.spiders'], 'RETRY_HTTP_CODES': [400, 408, 502, 504], 'BOT_NAME': 'meta', 'DOWNLOAD_TIMEOUT': 60, 'CONCURRENT_ITEMS': 300, 'USER_AGENT': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.168 Safari/535.19', 'DEPTH_PRIORITY': 1, 'SCHEDULER_MEMORY_QUEUE': 'scrapy.squeue.FifoMemoryQueue', 'LOG_FILE': 'sogou_news_copy.log', 'SCHEDULER_DISK_QUEUE': 'scrapy.squeue.PickleFifoDiskQueue', 'DOWNLOAD_DELAY': 30.0}
+2015-12-12 14:50:12+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-12-12 14:50:12+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-12-12 14:50:12+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-12-12 14:50:12+0800 [scrapy] INFO: Enabled item pipelines: MetaPipeline

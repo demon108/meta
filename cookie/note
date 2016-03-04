@@ -1,0 +1,4 @@
+cookie的文件名命名格式为：
+    sogou_weixin_day.conf，则cookie文件名为：sogou_weixin_day.cookie
+    
+若找到conf文件对应的cookie文件，则加载该cookie，若没有该cookie文件，则不加载cookie

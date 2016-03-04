@@ -1,0 +1,57 @@
+代码：
+svn://wb.maixunbytes.com/ctrpr/trunk/meta_tools
+
+部署位置：
+/home/zzg/meta_tools/
+
+功能介绍：
+run_meta_process_stat.py： 统计当前机器进程数量，写入到数据库中
+meta.py： 读取对应机器应该所meta的关键词，然后交给cj的程序去处理
+	simu_meta.script auto_meta_hour.dat
+
+统计结果：http://pr.maixunbytes.com/newpr2/meta_list.php
+
+部署机器：
+3,6,10,11,12,13,14,15,16
+
+crontab 配置：
+55 * * * * /home/zzg/meta_tools/run_meta_process_stat.py
+2 * * * * /home/zzg/meta_tools/meta.py
+
+详细邮件：
+1. meta配置流程
+a）编辑人员提交meta关键词，包括时间,关键词等
+b）运维部门指定meta机器，meta正式启动（最快下一整点小时）
+2. 说明（极为重要！！！）
+a）关于关键词优先级的意义：
+关键词分为3级，普通关键词，高优先级关键词，低优先级关键词。
+顾名思义：高优先级最优先抓取，其次普通，最次低优先级
+b）关键词优先级对于抓取的影响：
+我们规定低优先级的关键词在白天，即：早上6点到晚上18点（包含6点和18点），是不进行meta的。
+c）meta时间对meta天数的影响：
+meta时间在10点以前的（包含10点），meta当前和昨天的。在10点以后的，只meta当天的
+d）meta是否有效的影响因素
+i）只有OA平台上有效的项目才会进入meta列表。（即过期和未配置的项目，meta是无效的）
+ii）对于meta状态为关闭状态的，不会meta（即使OA有效）
+3. 简单说明：
+a）页面地址:
+http://maixunbytes.com/cyberin/meta.php 
+管理工具->META配置
+b）meta参数：
+i）meta时间
+meta时间只能是整点，即：00~23点。选定时间后，点击添加meta时间，选定的时间地点，则会出现在后面的文本框里面。
+也可以手动的编辑：输入03,09,16，表示在凌晨3点，上午9点，16点进行meta
+页面负载图为后台机器的总任务总量，负载低的时间点，meta会快些。
+一般来说：需要在规定的上平台时间提前2小时配置meta时间。
+建议：
+优先按照数据上平台时间配置meta。要求9点上平台，至少meta时间最多不要超过7点
+如果对于上数据时间不敏感，关键词meta时间请根据机器负载图进行配置
+ii）meta文件名
+按照之前的约定，格式为：项目名称+平台id，比如baojie.693
+为了更好的可读性，请至少包含第一部分，项目名称（简单的写法是：baojie）
+iii）三级meta词
+请按照将关键词高，中，低的顺序排序，填入到对应的文本区域内，每行一个。
+不要求三者同时出现，即：项目至少有一个优先级。
+iv）meta状态
+开启状态/关闭状态
+如果项目不需要meta请将meta设置为关闭状态。

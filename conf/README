@@ -1,0 +1,33 @@
+运行该meta程序方法：
+
+run crawler
+
+conf/start_crawler.py
+	INFO:该脚本根据template，启动对应的crawler
+	
+	run meta crawler:python start_crawler.py
+	
+	run cluster crawler:python start_crawler.py mode=cluster
+	
+	该脚本为运行crawler脚本，包括启动meta和cluster meta
+
+
+
+NOTE:
+  auto_meta/meta_new.py
+	INFO:该脚本为根据前台关键词库，根据template分别讲关键词放入对应的redis key
+	run:python meta_new.py template_name
+	
+    a、查询前台的meta关键词配置库
+    b、将前台配置库按照时间分别导入到对应redis key中
+    c、每次运行meta crawler前都必须运行该脚本
+    d、该脚本在conf/start_crawler.py中被调用
+   
+
+NOTE:
+   a、pattern目录:放置控制template脚本，为启动crawler的配置文件
+   b、cookie目录:放置对应template的cookie文件，cookie文件与pattern文件对应，若存在对应pattern的cookie文件，则在运行该crawler时会加载该cookie文件
+      
+
+	
+    
