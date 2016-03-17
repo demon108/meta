@@ -541,20 +541,7 @@ class MetaSpider(Spider):
             metareslt['result_item'] = result_item
             yield metareslt
         	
-	#print 'use Max_Page: ',int(cur_page)<=self.Max_Page
-	#print 'whether_get_next_page: ',whether_get_next_page
-	#print 'cur_page: ',cur_page
 	
-	#print '11: ',items and whether_get_next_page>=5 and not self.Max_Page and int(cur_page)<=self.Max_Page
-	#print '22: ',items and whether_get_next_page>=5 and not self.Max_Page
-	#print '33: ',items and whether_get_next_page>=5
-	#print '44: ',whether_get_next_page>=5
-	#print '55: ',not self.Max_Page
-	#print '66: ',int(cur_page)<=self.Max_Page
-	#print '77: ',self.Max_Page
-	#print 'whether_get_next_page: ',whether_get_next_page
-	#print 'cur_page: ',cur_page
-	#print items and whether_get_next_page>=5 and int(cur_page)<=self.Max_Page
 	judge_url = self.judge_url_duplicate(keyword,current_crawler_url)
 	#print 'judge parse: ',judge_url
         if items and whether_get_next_page>=5 and int(cur_page)<=self.Max_Page and judge_url:
@@ -632,63 +619,4 @@ class MetaSpider(Spider):
             self.log_writer.write('%s\tcan`t get items:\t%s\n'%(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'),response.url))
 
 
-'''
-        if last_artilce_time==0:
-            cur_timestamp = time.time()
-        else:
-            cur_timestamp = self.datetime_to_timestamp(last_artilce_time)
-#         print 'cur_timestamp: ',cur_timestamp
-        today_timestamp,yesterday_timestamp,twodaysago_timestamp = self.get_timestamp()
-        cur_hour = datetime.datetime.now().hour
-        if self.Next_Page_Xpath:
-            next_page_href = sel.xpath(self.Next_Page_Xpath).extract()
-            flag = False
-            try:
-                next_page_href = next_page_href[int(self.Next_Page_Xpath_Num)]
-                if not next_page_href.startswith('#'):
-                    flag = True
-            except:
-                flag = False
-        else:
-            flag = True
-#         print 'cur_hour: ',cur_hour
-#         print 'flag: ',flag
-        if self.Check_Article_Time.lower()=='false':
-            if flag:
-                reqs = self.make_next_request(keyword, cur_page,searchtime)
-                for req in reqs:
-                    yield req
-            else:
-                #抓取下一个关键词
-                reqs = self.make_reqs_by_keyword(1)
-                for req in reqs:
-                    yield req
-        elif self.Crawle_Total_Pages:
-            reqs = self.make_next_request(keyword, cur_page,searchtime)
-            #if int(cur_page)==1:
-            #    print reqs
-            for req in reqs:
-                yield req
-            if int(cur_page)==int(self.Crawle_Total_Pages):
-                #抓取下一个关键词
-                log.msg('catch next keyword   cur_page: %s  Crawle_Total_Pages:%s'%(str(cur_page),str(self.Crawle_Total_Pages)),log.INFO)
-                reqs = self.make_reqs_by_keyword(1)
-                for req in reqs:
-                    yield req
-        else:
-            if cur_hour<18 and cur_hour>8:
-                min_time = today_timestamp-1
-            else:
-                min_time = today_timestamp-1
 
-
-            if cur_timestamp>min_time and flag:
-                reqs = self.make_next_request(keyword, cur_page,searchtime)
-                for req in reqs:
-                    yield req
-            else:
-                #抓取下一个关键词
-                reqs = self.make_reqs_by_keyword(1)
-                for req in reqs:
-                    yield req
-'''
