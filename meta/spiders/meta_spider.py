@@ -445,10 +445,7 @@ class MetaSpider(Spider):
             content = response.body_as_unicode()
         except:
             content = response.body
-        #self.test_log_writer.write('%s\n'%(response.url))
-        #self.test_log_writer.write('%s\n'%(content))
-        #self.test_log_writer.write('--'*30)
-        #self.test_log_writer.flush()
+        
         content = clear_html_comment(content)
         content = special_require_content(content,self.conf_name)
         sel = Selector(text=content)
